@@ -7,6 +7,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -88,6 +89,25 @@ public class EmployeeController {
 		}
 	 }
 	//DELETE BY ID
-	
+	@DeleteMapping("/{id")
+	public ResponseEntity<HttpStatus> deleteById(@PathVariable("id") long id){
+		try {
+			employeeRepository.findById(id);
+			return new ResponseEntity<>(null,HttpStatus.NO_CONTENT);
+		} catch (Exception e) {
+			return new ResponseEntity<>(null,HttpStatus.INTERNAL_SERVER_ERROR);
+			// TODO: handle exception
+		}
+	}
+	//DELETE ALL 
+	@DeleteMapping("/all")
+	public ResponseEntity<HttpStatus> deleteAll(){
+		try {
+			employeeRepository.findAll();
+			return new ResponseEntity<>(null,HttpStatus.NO_CONTENT);
+		} catch (Exception e) {
+			return new ResponseEntity<>(null,HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
 	}
 
