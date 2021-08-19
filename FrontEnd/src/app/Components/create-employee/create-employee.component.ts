@@ -39,5 +39,9 @@ export class CreateEmployeeComponent implements OnInit {
   returnToList(){
     this.router.navigate(['/employees']);
   }
+  onSubmit(){
+    this.submitted=true;
+    this.save();
+  }
 
 }
