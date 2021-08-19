@@ -20,7 +20,7 @@ export class EmployeeServiceService {
     return this.http.put(`${this.baseUrl}/${id}`,value);
   }
   //deleteEmployee
-  deleteEmployee(id:number):Observable<any>{
+  deleteEmployeeById(id:number):Observable<any>{
     return  this.http.delete(`${this.baseUrl}/${id}`,{responseType:'text'});
   }
   //create employee
