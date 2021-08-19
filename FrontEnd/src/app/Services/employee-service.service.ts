@@ -23,4 +23,8 @@ export class EmployeeServiceService {
   deleteEmployee(id:number):Observable<any>{
     return  this.http.delete(`${this.baseUrl}/${id}`,{responseType:'text'});
   }
+  //create employee
+  createEmployee(employee:any):Observable<any>{
+    return this.http.post(`${this.baseUrl}`,employee);
+  }
 }
