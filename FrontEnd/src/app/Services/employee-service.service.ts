@@ -1,9 +1,26 @@
 import { Injectable } from '@angular/core';
-
+import {  HttpClient} from "@angular/common/http";
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeServiceService {
-
-  constructor() { }
+  private baseUrl="";
+  constructor(private http:HttpClient) { }
+  //get employee by Id
+  getEmployee(id:number):Observable<any>{
+    return this.http.get(`${this.baseUrl}/{$id}`);
+  }
+  //get all employees
+  getAllEmployees():Observable<any>{
+    return this.http.get(`${this.baseUrl}`);
+  }
+  //update employee 
+  updateEmployee(id:number,value:any):Observable<Object>{
+    return this.http.put(`${this.baseUrl}/${id}`,value);
+  }
+  //deleteEmployee
+  deleteEmployee(id:number):Observable<any>{
+    return  this.http.delete(`${this.baseUrl}/${id}`,{responseType:'text'});
+  }
 }
