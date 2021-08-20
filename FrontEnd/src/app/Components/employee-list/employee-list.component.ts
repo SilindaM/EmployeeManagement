@@ -10,7 +10,7 @@ import { EmployeeServiceService } from 'src/app/Services/employee-service.servic
   styleUrls: ['./employee-list.component.css']
 })
 export class EmployeeListComponent implements OnInit {
-  employees?:Observable<Employee[]>;
+  employees?:Employee[];
   constructor(private employeeService:EmployeeServiceService,private router:Router) { }
 
   ngOnInit(): void {
@@ -19,7 +19,8 @@ export class EmployeeListComponent implements OnInit {
   }
   //load employees
   loadEmployees(){
-    this.employees=this.employeeService.getAllEmployees();
+    this.employeeService.getAllEmployees();
+   
   }
   //delete employee by id
   deleteEmployeeById(id:number){
