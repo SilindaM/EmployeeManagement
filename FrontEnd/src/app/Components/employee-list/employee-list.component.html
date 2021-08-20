@@ -12,14 +12,17 @@
                     <th>Actions</th>
                 </tr>
             </thead>
-            <tr *ngFor="let employe of employees | async">
+            <tr *ngFor="let employe of employees">
                 <td>{{employe.firstName}}</td>
                 <td>{{employe.lastName}}</td>
                 <td>{{employe.emailId}}</td>
                 <td>
-                    <button (click)="deleteEmployeeById(employe.id)" class="btn btn-danger">Delete</button>
+                    <!--
+ <button (click)="deleteEmployeeById(employe.id)" class="btn btn-danger">Delete</button>
                     <button (click)="showEmployeeDetails(employe.id)" class="btn btn-warning">Details</button>
-                    <button (click)="updateEmployeeDetails(employe.id)" class="btn btn-primary">Delete</button>
+                    <button (click)="updateEmployeeDetails(employe.id>)" class="btn btn-primary">Delete</button>
+                    -->
+                   
                 </td>
             </tr>
         </table>
