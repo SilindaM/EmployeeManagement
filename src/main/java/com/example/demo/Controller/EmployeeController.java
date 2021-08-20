@@ -94,7 +94,7 @@ public class EmployeeController {
 	@DeleteMapping("/{id")
 	public ResponseEntity<HttpStatus> deleteById(@PathVariable("id") long id){
 		try {
-			employeeRepository.DeleteById(id);
+			employeeRepository.deleteById(id);
 			return new ResponseEntity<>(null,HttpStatus.NO_CONTENT);
 		} catch (Exception e) {
 			return new ResponseEntity<>(null,HttpStatus.INTERNAL_SERVER_ERROR);
@@ -105,7 +105,7 @@ public class EmployeeController {
 	@DeleteMapping("/all")
 	public ResponseEntity<HttpStatus> deleteAll(){
 		try {
-			employeeRepository.DeleteAll();
+			employeeRepository.deleteAll();
 			return new ResponseEntity<>(null,HttpStatus.NO_CONTENT);
 		} catch (Exception e) {
 			return new ResponseEntity<>(null,HttpStatus.INTERNAL_SERVER_ERROR);
