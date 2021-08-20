@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EmployeeServiceService {
-  private baseUrl="";
+  private baseUrl="http://localhost:8082/api/employees/";
   constructor(private http:HttpClient) { }
   //get employee by Id
   getEmployee(id:number):Observable<any>{
