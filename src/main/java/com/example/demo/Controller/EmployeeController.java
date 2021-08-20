@@ -28,7 +28,7 @@ public class EmployeeController {
 	@Autowired
 	EmployeeRepository employeeRepository;
 	
-	//get All employees hjhjh jhjh
+	//get All employees all
 	@GetMapping("/")
 	public ResponseEntity<List<Employee>> getAllEmployees(){
 		try {
