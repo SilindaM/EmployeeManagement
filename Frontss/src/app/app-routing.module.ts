@@ -6,7 +6,7 @@ import { EmployeeListComponent } from './Components/employee-list/employee-list.
 import { UpdateEmployeeComponent } from './Components/update-employee/update-employee.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'employees',pathMatch:'full'},
+  {path:'',redirectTo:'employee',pathMatch:'full'},
   {path:'employees',component:EmployeeListComponent},
   {path:'add-emp',component:CreateEmployeeComponent},
   {path:'update-emp/:id',component:UpdateEmployeeComponent},
