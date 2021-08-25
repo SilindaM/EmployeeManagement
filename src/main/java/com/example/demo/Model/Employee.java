@@ -12,18 +12,18 @@ public class Employee {
  private long id;
  private String firstName;
  private String lastName;
- private String email;
+ private String emailId;
  
 //constru 
 public Employee() {
 	super();
 }
 
-public Employee(String firstName, String lastName, String email) {
+public Employee(String firstName, String lastName, String emailId) {
 	super();
 	this.firstName = firstName;
 	this.lastName = lastName;
-	this.email = email;
+	this.emailId = emailId;
 }
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
@@ -53,16 +53,16 @@ public void setLastName(String lastName) {
 }
 @Column(name="email_address",nullable=false)
 public String getEmail() {
-	return email;
+	return emailId;
 }
 
 public void setEmail(String email) {
-	this.email = email;
+	this.emailId = email;
 }
 
 @Override
 public String toString() {
-	return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+	return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + emailId + "]";
 }
  
  
