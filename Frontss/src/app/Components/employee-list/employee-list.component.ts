@@ -11,7 +11,7 @@ import { EmployeesService } from 'src/app/Services/employees.service';
 })
 export class EmployeeListComponent implements OnInit {
 
-  employee?:Observable<Employee[]>;
+  employees?:Observable<Employee[]>;
   
   constructor(private serv:EmployeesService,private router:Router) { }
 
@@ -20,7 +20,7 @@ export class EmployeeListComponent implements OnInit {
   }
   //load Data to the component
   LoadData(){
-    this.employee=this.serv.getAllEmployees();
+    this.employees=this.serv.getAllEmployees();
   }
   //delete select employee
   DeleteEmployeeById(id:number){
