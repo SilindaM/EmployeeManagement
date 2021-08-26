@@ -36,6 +36,6 @@ export class EmployeeListComponent implements OnInit {
   }
   //get Employee Details
   EmployeeDetails(id:number){
-    this.router.navigate(['details',id]);
+    this.router.navigate(['emp-detail',id]);
   }
 }
