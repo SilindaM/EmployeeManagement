@@ -16,9 +16,11 @@
           <tr *ngFor="let employee of employees | async">
             <td>{{employee.firstName}}</td>
             <td>{{employee.lastName}}</td>
-            <td>{{employee.emailId}}</td>
+            <td>{{employee.email}}</td>
             <td>
-               
+              <button (click)="DeleteEmployeeById(employee.id)" class="btn btn-danger">Delete</button>
+              &nbsp;
+              <button (click)="EmployeeDetails(employee.id)" class="btn btn-warning">Details</button>
             </td>
           </tr>
         </tbody>
