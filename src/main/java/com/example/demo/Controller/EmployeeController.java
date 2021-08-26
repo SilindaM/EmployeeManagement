@@ -90,7 +90,7 @@ public class EmployeeController {
 		}
 	 }
 	//DELETE BY ID
-	@DeleteMapping("/{id")
+	@DeleteMapping("/{id}")
 	public ResponseEntity<HttpStatus> deleteById(@PathVariable("id") long id){
 		try {
 			employeeRepository.deleteById(id);
