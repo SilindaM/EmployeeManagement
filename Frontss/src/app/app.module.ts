@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {  HttpClientModule} from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { EmployeeListComponent } from './Components/employee-list/employee-list.component';
 import { CreateEmployeeComponent } from './Components/create-employee/create-employee.component';
@@ -19,7 +20,8 @@ import { EmployeeDetailsComponent } from './Components/employee-details/employee
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
