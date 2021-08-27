@@ -20,7 +20,7 @@ export class EmployeesService {
     return this.http.get(`${this.baseUrl}`);
   }
   //create new Employee
-  createEmployee(employee:object):Observable<Object>{
+  createEmployee(employee:object):Observable<any>{
     return this.http.post(`${this.baseUrl}`,employee);
   }
   //update an employee
