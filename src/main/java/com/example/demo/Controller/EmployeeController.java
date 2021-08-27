@@ -62,7 +62,7 @@ public class EmployeeController {
 	public ResponseEntity<Employee> createEmployee(@RequestBody Employee employee){
 		try {
 			Employee createEmployee=employeeRepository.save(employee);
-			return new ResponseEntity<Employee>(createEmployee,HttpStatus.CREATED);
+			return new ResponseEntity<Employee>(createEmployee,HttpStatus.OK);
 		} catch (Exception e) {
 			return new ResponseEntity<>(null,HttpStatus.INTERNAL_SERVER_ERROR);
 			// TODO: handle exception
